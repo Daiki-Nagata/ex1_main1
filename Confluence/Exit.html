@@ -1,0 +1,33 @@
+{% extends "global/Page.html" %}
+
+{% block content %}
+<h3 class="mb-3">終了画面</h3>
+<div class="card mb-4">
+  <div class="card-body">
+    <p>ご協力いただき、誠にありがとうございました。</p>
+    <p class="fw-bold text-danger">【注意】あなたのパスコード：<span style="font-size:1.2em;">{{ passcode }}</span></p>
+    <p>
+      <strong>この画面でパスコードを入力し、「送信」ボタンを押してください。</strong><br>
+      また、Yahoo!クラウドソーシングのサイトに戻った際にも、同じパスコードの入力が必要です。<br>
+      <span class="text-danger">パスコードを控えておき、必ず両方の画面で入力してください。</span>
+    </p>
+    <div class="mb-3">
+      <label for="entered_passcode" class="form-label">パスコードを入力してください：</label>
+      {{ formfield 'entered_passcode' }}
+    </div>
+    <button type="submit" class="btn btn-primary" id="submitBtn" disabled>送信</button>
+  </div>
+</div>
+<script>
+  // パスコード入力欄が空なら送信ボタンを無効化
+  document.addEventListener('DOMContentLoaded', function() {
+    const input = document.querySelector('input[name="entered_passcode"]');
+    const btn = document.getElementById('submitBtn');
+    function toggleBtn() {
+      btn.disabled = !input.value.trim();
+    }
+    input.addEventListener('input', toggleBtn);
+    toggleBtn();
+  });
+</script>
+{% endblock %}

@@ -1,0 +1,63 @@
+{% extends "global/Page.html" %}
+
+{% block content %}
+<div class="alert alert-primary mb-4" style="background-color: white; padding: 20px; border-radius: 5px;">
+  <h2 class="mb-3">個人データ活用に関する調査</h2>
+  <h3 class="mb-3">調査データの収集・利用に関する通知および同意書</h3>
+  <p>この研究は、神戸大学の研究者によって実施されています。</p>
+  <h4>研究の目的：</h4>
+  <p>本研究の目的は、ビジネスに関する課題を探求することです。</p>
+  <h4>手続き：</h4>
+  <p>
+    この調査に参加することで、あなたはこの同意文を読み、匿名の調査に参加することに同意したとみなされます。
+    参加に同意する場合、あなたが提供するデータは、Yahoo!クラウドソーシングのプライバシーポリシーに基づき、収集・利用される可能性があります。
+  </p>
+  <h4>研究参加に伴うリスク：</h4>
+  <p>本研究に参加することによる潜在的なリスクはありません。</p>
+  <h4>匿名性：</h4>
+  <p>
+    本研究への参加は完全に匿名です。あなたが提供した情報は、使用したコンピュータやその他の手段を通じて、あなた個人を特定することはできません。
+    調査データにアクセスできるのは調査を実施する研究者のみであり、データは研究者のデータバンクに保管されます。
+  </p>
+  <h4>研究への参加は任意です：</h4>
+  <p>
+    あなたの参加は完全に任意であり、いつでも理由を問わず参加を拒否または中止することができます。
+    その際、罰則や、本来受けられるはずの利益を失うことはありません。また、一部の質問に回答しない選択も可能です。
+  </p>
+  <h4>問い合わせ先：</h4>
+  <p>
+    この研究に関してご質問がある場合は、Yahoo!クラウドソーシングのページを通じて本調査の実施者にメッセージを送ることができます。
+  </p>
+  <h4>注意事項：</h4>
+  <p>
+    この研究には、参加者が誠実かつ完全にタスクを遂行していることを確認するためのチェック項目がいくつか含まれています。
+    指示をよく読み、すべてのタスクを完了すれば、あなたの回答は承認されます。
+    これらのチェック質問に不合格となった場合、回答は却下されることがあります。
+  </p>
+  <p>
+    下の「同意する」を選択し、「次へ」ボタンをクリックすると、調査が開始されます。
+    「次へ」ボタンをクリックすることで、あなたは調査への参加に同意したことになります。
+  </p>
+</div>
+
+<div class="form-check mb-4">
+  <input class="form-check-input" type="checkbox" id="consentCheckbox" style="transform: scale(1.5);">
+  <label class="form-check-label" for="consentCheckbox" style="font-size: 1.2rem;">
+    同意する
+  </label>
+</div>
+
+<div class="text-end">
+  <button class="btn btn-primary" id="nextButton" type="submit" disabled>次へ</button>
+</div>
+
+<script>
+  // Enable the "次へ" button only if the checkbox is checked
+  const consentCheckbox = document.getElementById('consentCheckbox');
+  const nextButton = document.getElementById('nextButton');
+
+  consentCheckbox.addEventListener('change', function () {
+    nextButton.disabled = !this.checked;
+  });
+</script>
+{% endblock %}
