@@ -301,9 +301,9 @@ class Questionare(Page):
         fairness_items = list(zip(fairness_questions, fairness_fields))
 
         risk_questions = [
-            "一般的に言って、私は、リスクを取ることに積極的である。",
-            "リスクをとることが合理的だと感じましたか？",
-            "リスクを取る選択が今後も報われると感じましたか？"
+            "日頃、リスクを取ることに積極的である。",
+            "タスクに回答する上でリスクをとることが合理的だと感じた",
+            "タスクに回答する上でリスクを取る選択が今後も報われると感じた"
         ]
         risk_fields = ['risk_preference','risk_reasonable', 'risk_future']
         risk_items = list(zip(risk_questions, risk_fields))
