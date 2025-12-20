@@ -246,7 +246,7 @@ class Questionare(Page):
     form_fields = [
         'crt1', 'crt2', 'crt3',
         'fairness1', 'fairness2', 'fairness3', 'fairness4', 'fairness5', 'fairness6', 'fairness7', 'fairness8',
-        'risk_reasonable', 'risk_future',
+        'risk_preference', 'risk_reasonable', 'risk_future',
         'age', 'gender', 'work_years', 'finance_knowledge'
     ]
 
