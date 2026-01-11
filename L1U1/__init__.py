@@ -8,16 +8,16 @@ class C(BaseConstants):
     NUM_TASKS = 10
 
     # 1回目のタスクの確率（%）
-    RISKY_PROBABILITIES = [30, 25, 50, 30, 50, 33, 40, 90, 70, 80] 
+    RISKY_PROBABILITIES = [0, 30, 50, 70, 85, 50, 40, 90, 80, 80] 
 
     # １回目のタスクの報酬設定
     SAFE_REWARDS = [
-        cu(400), cu(200), cu(600), cu(100), cu(300), 
-        cu(250), cu(380), cu(800), cu(500), cu(450)
+        cu(400), cu(200), cu(500), cu(100), cu(200), 
+        cu(250), cu(350), cu(850), cu(500), cu(200)
     ]
     RISKY_SUCCESS_REWARDS = [
-        cu(900), cu(800), cu(800), cu(500), cu(700),
-        cu(750), cu(950), cu(880), cu(720), cu(600)
+        cu(900), cu(800), cu(800), cu(650), cu(700),
+        cu(750), cu(950), cu(880), cu(800), cu(700)
     ]
     RISKY_FAILURE_REWARDS = [cu(0)] * NUM_TASKS
 
