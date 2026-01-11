@@ -8,7 +8,7 @@ class C(BaseConstants):
     NUM_TASKS = 10
 
     # 1回目のタスクの確率（%）
-    RISKY_PROBABILITIES = [0, 30, 50, 70, 85, 50, 40, 90, 80, 80] 
+    RISKY_PROBABILITIES = [30, 30, 50, 70, 85, 50, 40, 90, 80, 80] 
 
     # １回目のタスクの報酬設定
     SAFE_REWARDS = [
